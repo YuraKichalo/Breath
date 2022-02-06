@@ -5,6 +5,7 @@ platform :ios, '11.0'
 
 target 'Breath' do
   config = use_native_modules!
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
   use_react_native!(
     :path => config[:reactNativePath],
