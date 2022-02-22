@@ -1,11 +1,13 @@
 import React from 'react'
 import { View, ViewProps, useColorScheme } from 'react-native'
+import LinearGradient from 'react-native-linear-gradient'
 
 import { styles } from './styles'
-import LinearGradient from 'react-native-linear-gradient'
+import { useThemeColors } from 'presentation/assets'
 
 export const Screen = (props: ViewProps) => {
   const colorScheme = useColorScheme()
+  const colors = useThemeColors()
 
   const renderGradientedScreen = () => (
     <View style={styles.container}>
@@ -29,14 +31,14 @@ export const Screen = (props: ViewProps) => {
     </View>
   )
 
-  const renderRegularScreen = () => (
+  const renderDarkModeScreen = () => (
     <View
       {...props}
-      style={[styles.screen, props.style]}
+      style={[styles.screen, props.style, { backgroundColor: colors.screen }]}
     />
   )
 
   return colorScheme === 'light'
     ? renderGradientedScreen()
-    : renderRegularScreen()
+    : renderDarkModeScreen()
 }
