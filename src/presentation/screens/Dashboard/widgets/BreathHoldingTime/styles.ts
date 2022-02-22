@@ -3,14 +3,14 @@ import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
-    paddingHorizontal:25
+    alignItems: 'center'
   },
-  widgetsRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between'
+  seconds: {
+    fontSize: 50,
+    fontWeight: 'bold'
   },
-  widget: {
-    width: 150,
-    height: 150
+  label: {
+    fontSize: 18,
+    fontWeight: 'bold'
   }
 })

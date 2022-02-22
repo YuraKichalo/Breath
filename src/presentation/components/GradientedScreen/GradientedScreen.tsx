@@ -4,10 +4,9 @@ import LinearGradient from 'react-native-linear-gradient'
 
 import { GradientedScreenProps } from './GradientedScreenProps'
 import { styles } from './styles'
-import { Screen } from 'presentation/components'
 
 export const GradientedScreen = (props: GradientedScreenProps) => (
-  <Screen>
+  <View style={styles.container}>
     <LinearGradient
       colors={['#FFFFFF', '#D9FAF8', '#94E9EE']}
       locations={[0, 0.5, 1]}
@@ -25,5 +24,5 @@ export const GradientedScreen = (props: GradientedScreenProps) => (
     >
       {props.children}
     </View>
-  </Screen>
+  </View>
 )

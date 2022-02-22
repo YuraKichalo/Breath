@@ -1,12 +1,15 @@
 import React from 'react'
+import { View } from 'react-native'
 
 import { styles } from './styles'
-import { GradientedScreen, Body } from 'presentation/components'
+import { GradientedScreen, Screen } from 'presentation/components'
+import * as Widgets from './widgets'
 
 export const Dashboard = () => (
-  <GradientedScreen style={styles.container}>
-    <Body style={styles.text}>
-      Dashboard
-    </Body>
-  </GradientedScreen>
+  <Screen style={styles.container}>
+    <View style={styles.widgetsRow}>
+      <Widgets.BreathesAmount style={styles.widget} />
+      <Widgets.BreathHoldingTime style={styles.widget} />
+    </View>
+  </Screen>
 )
